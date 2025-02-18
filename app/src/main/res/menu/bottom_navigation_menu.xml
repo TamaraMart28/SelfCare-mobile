@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_selections"
+        android:title="Места"
+        android:icon="@drawable/ic_baseline_map_24" />
+    <item
+        android:id="@+id/navigation_collections"
+        android:title="Коллекция"
+        android:icon="@drawable/ic_baseline_auto_awesome_motion_24"/>
+    <item
+        android:id="@+id/navigation_account"
+        android:title="Профиль"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        />
+</menu>

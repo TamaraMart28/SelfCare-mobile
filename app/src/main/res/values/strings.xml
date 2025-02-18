@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SelfCare</string>
+
+<!--    <string name="server_url">http://192.168.0.8:8070/</string>-->
+        <string name="server_url">http://172.20.10.2:8070/</string>
+    <string name="api_key">525d29d3-cc26-42e9-8164-73fc70967cf9</string>
+
+</resources>

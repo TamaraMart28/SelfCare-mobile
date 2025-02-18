@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/very_light_green"
+    tools:context=".workout.ScrollingFragmentCreateEditWorkout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            style="@style/Theme.Prototype.Normal"
+            android:textColor="@color/dark_brown"
+            android:text="Название тренировки*:"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/edit_text_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    style="@style/Theme.Prototype.Normal"
+                    android:backgroundTint="@color/brown"
+                    android:textColor="@color/dark_brown"
+                    android:textColorHint="@color/light_brown"
+                    android:hint="Название"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            style="@style/Theme.Prototype.Normal"
+            android:textColor="@color/dark_brown"
+            android:text="Продолжительность тренировки*:"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/edit_text_duration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:hint="Время"
+                    android:backgroundTint="@color/brown"
+                    android:textColor="@color/dark_brown"
+                    android:textColorHint="@color/light_brown"
+                    style="@style/Theme.Prototype.Normal"
+                    android:focusable="false"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            style="@style/Theme.Prototype.Normal"
+            android:textColor="@color/dark_brown"
+            android:text="Сложность тренировки*:"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_difficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupDif"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radioButton1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:layout_weight="1"
+                        style="@style/Theme.Prototype.Normal"
+                        android:textColor="@color/dark_brown"
+                        android:buttonTint="@color/dark_brown"
+                        android:text="1" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/Theme.Prototype.Normal"
+                        android:textColor="@color/dark_brown"
+                        android:buttonTint="@color/dark_brown"
+                        android:text="2" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/Theme.Prototype.Normal"
+                        android:textColor="@color/dark_brown"
+                        android:buttonTint="@color/dark_brown"
+                        android:text="3" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/Theme.Prototype.Normal"
+                        android:textColor="@color/dark_brown"
+                        android:buttonTint="@color/dark_brown"
+                        android:text="4" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/Theme.Prototype.Normal"
+                        android:textColor="@color/dark_brown"
+                        android:buttonTint="@color/dark_brown"
+                        android:text="5" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            style="@style/Theme.Prototype.Normal"
+            android:textColor="@color/dark_brown"
+            android:text="Тренировка предназначена*:"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="8dp">
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:padding="5dp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.Prototype.Normal"
+                    android:textColor="@color/dark_brown"
+                    android:buttonTint="@color/dark_brown"
+                    android:text="Для женщин" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.Prototype.Normal"
+                    android:textColor="@color/dark_brown"
+                    android:buttonTint="@color/dark_brown"
+                    android:text="Для мужчин" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonBoth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.Prototype.Normal"
+                    android:textColor="@color/dark_brown"
+                    android:buttonTint="@color/dark_brown"
+                    android:checked="true"
+                    android:text="Для всех" />
+
+            </RadioGroup>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            style="@style/Theme.Prototype.Normal"
+            android:textColor="@color/dark_brown"
+            android:text="Описание тренировки*:"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/edit_text_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:inputType="textMultiLine"
+                    style="@style/Theme.Prototype.Normal"
+                    android:textColor="@color/dark_brown"
+                    android:minLines="8"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            style="@style/Theme.Prototype.Normal"
+            android:textColor="@color/dark_brown"
+            android:text="На что направлена тренировка?"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_focus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_complete_text_focus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        style="@style/Theme.Prototype.Normal"
+                        android:backgroundTint="@color/brown"
+                        android:textColor="@color/dark_brown"
+                        android:textColorHint="@color/light_brown"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Фокус на" />
+
+                    <ImageButton
+                        android:id="@+id/but_add_focus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_baseline_add_circle_24"
+                        android:backgroundTint="@color/light_green"
+                        android:layout_gravity="center"
+                        android:padding="20dp"
+                        android:layout_margin="5dp"/>
+
+                </LinearLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/fl_focus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:flexDirection="row"
+                    app:flexWrap="wrap"
+                    app:justifyContent="center"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            style="@style/Theme.Prototype.Normal"
+            android:textColor="@color/dark_brown"
+            android:text="Укажите тип тренировки:"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_complete_text_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        style="@style/Theme.Prototype.Normal"
+                        android:backgroundTint="@color/brown"
+                        android:textColor="@color/dark_brown"
+                        android:textColorHint="@color/light_brown"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Тип" />
+
+                    <ImageButton
+                        android:id="@+id/but_add_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_baseline_add_circle_24"
+                        android:backgroundTint="@color/light_green"
+                        android:layout_gravity="center"
+                        android:padding="20dp"
+                        android:layout_margin="5dp"/>
+
+                </LinearLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/fl_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:flexDirection="row"
+                    app:flexWrap="wrap"
+                    app:justifyContent="center"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            style="@style/Theme.Prototype.Normal"
+            android:textColor="@color/dark_brown"
+            android:text="Какое оборудование понадобится?"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_equipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_complete_text_equipment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="5dp"
+                        style="@style/Theme.Prototype.Normal"
+                        android:backgroundTint="@color/brown"
+                        android:textColor="@color/dark_brown"
+                        android:textColorHint="@color/light_brown"
+                        android:hint="Оборудование" />
+
+                    <ImageButton
+                        android:id="@+id/but_add_equipment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_baseline_add_circle_24"
+                        android:backgroundTint="@color/light_green"
+                        android:layout_gravity="center"
+                        android:padding="20dp"
+                        android:layout_margin="5dp"/>
+
+                </LinearLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/fl_equipment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:flexDirection="row"
+                    app:flexWrap="wrap"
+                    app:justifyContent="center"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            style="@style/Theme.Prototype.Normal"
+            android:textColor="@color/dark_brown"
+            android:text="Укажите цель тренировки:"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_target"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_complete_text_target"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        style="@style/Theme.Prototype.Normal"
+                        android:backgroundTint="@color/brown"
+                        android:textColor="@color/dark_brown"
+                        android:textColorHint="@color/light_brown"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Цель" />
+
+                    <ImageButton
+                        android:id="@+id/but_add_target"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_baseline_add_circle_24"
+                        android:backgroundTint="@color/light_green"
+                        android:layout_gravity="center"
+                        android:padding="20dp"
+                        android:layout_margin="5dp"/>
+
+                </LinearLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/fl_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:flexDirection="row"
+                    app:flexWrap="wrap"
+                    app:justifyContent="center"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            style="@style/Theme.Prototype.Normal"
+            android:textColor="@color/dark_brown"
+            android:text="Упражнения*:"/>
+
+        <Spinner
+            android:id="@+id/spinner_dish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_gravity="center"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_training"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="5dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="20dp"
+                        style="@style/Theme.Prototype.Normal"
+                        android:textColor="@color/dark_brown"
+                        android:text="Название упражнения*:"/>
+
+                    <EditText
+                        android:id="@+id/edit_text_name_training"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.5"
+                        style="@style/Theme.Prototype.Normal"
+                        android:backgroundTint="@color/brown"
+                        android:textColor="@color/dark_brown"
+                        android:textColorHint="@color/light_brown"
+                        android:hint="Название"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="20dp"
+                        style="@style/Theme.Prototype.Normal"
+                        android:textColor="@color/dark_brown"
+                        android:text="Описание*:"/>
+
+                    <EditText
+                        android:id="@+id/edit_text_description_training"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.5"
+                        android:inputType="textMultiLine"
+                        style="@style/Theme.Prototype.Normal"
+                        android:backgroundTint="@color/brown"
+                        android:textColor="@color/dark_brown"
+                        android:textColorHint="@color/light_brown"
+                        android:minLines="4"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20dp"
+                        style="@style/Theme.Prototype.Normal"
+                        android:textColor="@color/dark_brown"
+                        android:text="Время выполнения или кол-во подходов*:"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:padding="5dp">
+
+                        <EditText
+                            android:id="@+id/edit_text_duration_training"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:hint="Время"
+                            style="@style/Theme.Prototype.Normal"
+                            android:backgroundTint="@color/brown"
+                            android:textColor="@color/dark_brown"
+                            android:textColorHint="@color/light_brown"
+                            android:layout_marginEnd="50dp"
+                            android:focusable="false"/>
+
+                        <EditText
+                            android:id="@+id/edit_text_amount_training"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            style="@style/Theme.Prototype.Normal"
+                            android:backgroundTint="@color/brown"
+                            android:textColor="@color/dark_brown"
+                            android:textColorHint="@color/light_brown"
+                            android:hint="Кол-во"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20dp"
+                        style="@style/Theme.Prototype.Normal"
+                        android:textColor="@color/dark_brown"
+                        android:text="Фото упражнения*:"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:padding="5dp">
+
+                        <Button
+                            android:id="@+id/button_select_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:layout_marginEnd="50dp"
+                            style="@style/Theme.Prototype.Italic"
+                            android:backgroundTint="@color/very_light_green"
+                            android:textColor="@color/dark_brown"
+                            android:text="Выбрать" />
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:scaleType="fitStart"
+                            android:adjustViewBounds="true"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:padding="5dp">
+
+                        <ImageButton
+                            android:id="@+id/but_add_training"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_baseline_add_circle_24"
+                            android:backgroundTint="@color/light_green"
+                            android:layout_gravity="center"
+                            android:padding="20dp"
+                            android:layout_margin="5dp"
+                            />
+
+                        <ImageButton
+                            android:id="@+id/but_delete_training"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_baseline_cancel_24"
+                            android:backgroundTint="@color/light_red"
+                            android:layout_gravity="center"
+                            android:padding="20dp"
+                            android:layout_margin="5dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/button_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            style="@style/Theme.Prototype.BoldItalic"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/very_light_green"
+            android:text="Готово" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+

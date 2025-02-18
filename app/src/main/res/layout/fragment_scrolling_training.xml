@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/very_light_green"
+    tools:context=".workout.ScrollingFragmentWorkout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Название упражнения"
+            android:textSize="24sp"
+            style="@style/Theme.Prototype.Bold"
+            android:textColor="@color/dark_brown"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:scaleType="fitStart"
+            android:adjustViewBounds="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/tvDurOrAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Продолжительность"
+            style="@style/Theme.Prototype.Bold"
+            android:textSize="18sp"
+            android:textColor="@color/dark_brown"
+            android:layout_margin="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/llTimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textViewTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="00:00"
+                style="@style/Theme.Prototype.Normal"
+                android:textColor="@color/dark_brown"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/buttonStart"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/light_brown"
+                    android:background="@drawable/ic_baseline_play_circle_24" />
+
+                <ImageButton
+                    android:id="@+id/buttonPause"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:backgroundTint="@color/light_brown"
+                    android:background="@drawable/ic_baseline_pause_circle_24" />
+
+                <ImageButton
+                    android:id="@+id/buttonReset"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/light_brown"
+                    android:background="@drawable/ic_baseline_replay_circle_24" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Описание упражнения"
+            style="@style/Theme.Prototype.Normal"
+            android:textSize="18sp"
+            android:textColor="@color/dark_brown"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            style="@style/Theme.Prototype.BoldItalic"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/very_light_green"
+            android:text="Далее"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
